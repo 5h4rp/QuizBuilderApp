@@ -4,10 +4,7 @@ import { createNew } from '../actions/create';
 
 import PropTypes from 'prop-types';
 
-//testing
-// import test from '../Testing/test';
-
-const CreateQues = ({ register }) => {
+const CreateQues = ({ createNew }) => {
   const [formData, setFormData] = useState({
     question: '',
     answer: '',
@@ -24,7 +21,7 @@ const CreateQues = ({ register }) => {
 
   const onSubmit = e => {
     e.preventDefault();
-    // test();
+
     createNew({ question, answer, option1, option2, option3 });
     console.log('Submitted!');
   };
