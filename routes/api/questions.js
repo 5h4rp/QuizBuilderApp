@@ -6,6 +6,7 @@ const Question = require('../../models/Question');
 
 // Get request to get all the questions
 router.get('/', async (req, res) => {
+  console.log('Getting all questions');
   try {
     const questions = await Question.find();
     res.json(questions);
@@ -36,7 +37,7 @@ router.post(
       .isEmpty()
   ],
   async (req, res) => {
-    // console.log(req.body);
+    console.log(req.body);
     const errors = validationResult(req);
     if (!errors.isEmpty()) {
       return res.status(400).json({ errors: errors.array() });

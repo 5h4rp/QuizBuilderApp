@@ -1,7 +1,5 @@
 const express = require('express');
-// const { check, validationResult } = require('express-validator');
 const connectDB = require('./config/db');
-// const Question = require('./models/Question');
 const quesRouter = require('./routes/api/questions');
 
 const app = express();
