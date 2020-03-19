@@ -24,6 +24,13 @@ const CreateQues = ({ createNew }) => {
 
     createNew({ question, answer, option1, option2, option3 });
     console.log('Submitted!');
+    setFormData({
+      question: '',
+      answer: '',
+      option1: '',
+      option2: '',
+      option3: ''
+    });
   };
 
   return (
